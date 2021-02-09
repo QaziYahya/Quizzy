@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'dosis';
+}
+
+/* Utility Classes */
+.btn {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.bg-dark {
+  background: #333;
+}
+.bg-blue {
+  background: #008ecc;
+}
+
+.bg-red {
+  background: red;
+}
+
+.py1 {
+  padding: 10px 0;
+}
+.py2 {
+  padding: 15px 0;
+}
+.py3 {
+  padding: 20px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Main Container Styling */
+.quiz-container {
+  transform: translateY(250px);
+}
+
+/* Welcome State Stying */
+.welcome-state {
+  text-align: center;
+  color: #4a96f8;
+  animation-name: welcome-animation;
+  animation-duration: 0.6s;
+}
+
+@keyframes welcome-animation {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+
+.start-btn,
+.start-game-btn,
+.start-game-btn-2,
+.quit-btn,
+.quit-btn-2,
+.next-btn {
+  padding: 12px 15px;
+  background: #fff;
+  border: 1px solid #4a96f8;
+  color: #444;
+  transition: 0.5s;
+  color: #4a96f8;
+}
+
+.start-game-btn,
+.start-game-btn-2 {
+  padding: 10px 15px;
+  margin-right: 5px;
+}
+
+.quit-btn,
+.quit-btn-2 {
+  padding: 9.5px 25px;
+  border: 1px solid rgb(253, 66, 66);
+  color: rgb(253, 66, 66);
+}
+
+.next-btn {
+  padding: 10px 15px;
+}
+
+.start-btn:hover,
+.start-game-btn:hover,
+.start-game-btn-2:hover,
+.next-btn:hover {
+  background: #64a6fd;
+  color: #fff;
+}
+
+.quit-btn:hover,
+.quit-btn-2:hover {
+  background: rgb(238, 75, 75);
+  color: #fff;
+}
+
+.next-btn {
+  display: none;
+  animation-name: nextBtn-animation;
+  animation-duration: 0.6s;
+}
+
+@keyframes nextBtn-animation {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+
+/* Instructions-state styling */
+.instructions-state {
+  display: none;
+  width: 370px;
+  padding: 10px 10px;
+  margin: 0 auto;
+  border: 1.5px solid #ddd;
+  border-radius: 5px;
+  box-shadow: -1px 11px 36px -11px rgba(0, 0, 0, 0.2);
+  animation-name: instructions-animation;
+  animation-duration: 0.6s;
+}
+
+@keyframes instructions-animation {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+
+.instructions-heading {
+  border-bottom: 1px solid #4a96f8;
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  color: #333;
+}
+
+.instruction {
+  padding: 5px;
+  color: #333;
+}
+
+.buttons {
+  margin: 10px 0 0 180px;
+}
+
+/* Game On State Styling */
+.game-on {
+  display: none;
+  border: 1px solid #ddd;
+  width: 550px;
+  padding: 15px;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: -1px 11px 36px -11px rgba(0, 0, 0, 0.3);
+  animation-name: gameOn-animation;
+  animation-duration: 0.6s;
+}
+
+@keyframes gameOn-animation {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+
+.title-and-timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.timer {
+  background: #d6e6fa;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.time-left {
+  background: #3285eb;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  margin-left: 5px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.answer {
+  background: #dfeafa;
+  padding: 15px 10px;
+  margin: 15px 0;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #67a5f7;
+  display: none;
+  cursor: pointer;
+}
+
+.tick-cross {
+  margin-left: 270px;
+}
+
+.fa-check-circle,
+.fa-times-circle {
+  font-size: 30px;
+  /* display: none; */
+}
+
+.fa-check-circle {
+  color: rgb(53, 175, 53);
+}
+
+.fa-times-circle {
+  color: rgb(236, 77, 77);
+}
+
+.question-number-next-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Win-Lose State */
+.win-lose-state {
+  display: none;
+  width: 360px;
+  margin: 0 auto;
+  padding: 30px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: -1px 11px 36px -11px rgba(0, 0, 0, 0.3);
+}
+
+.crown-icon {
+  color: #3085f5;
+}
+
+.congrats {
+  margin: 20px;
+  color: #333;
+  line-height: 1.5;
+}

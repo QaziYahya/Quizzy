@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <title>Quizyy</title>
+  </head>
+  <body>
+    <!-- Main Container -->
+    <div class="quiz-container">
+      <!-- Welcome State -->
+      <div class="welcome-state">
+        <h1 class="welcome py2">Welcome to Quizzy the quiz app!</h1>
+        <button class="start-btn btn">Start Game</button>
+      </div>
+
+      <!-- Instructions State -->
+      <div class="instructions-state">
+        <h3 class="instructions-heading text-center">Instructions</h3>
+        <ul class="all-instructions">
+          <li class="instruction instructions-1">
+            1) You will have to answer 10 questions.
+          </li>
+          <li class="instruction instructions-2">
+            2) You will have 20s to answer each question.
+          </li>
+          <li class="instruction instructions-3">
+            3) You can't go back once you select an answer.
+          </li>
+          <li class="instruction instructions-4">
+            4) You can't exit in the middle of the game.
+          </li>
+          <li class="instruction instructions-5">
+            5) Score 5 or more points to win.
+          </li>
+        </ul>
+        <div class="buttons">
+          <input type="submit" value="Start Game" class="start-game-btn btn" />
+          <input type="submit" value="Quit" class="quit-btn btn" />
+        </div>
+      </div>
+
+      <!-- Game On State -->
+      <div class="game-on">
+        <div class="title-and-timer">
+          <h3 class="title">Quizzy-The Quiz App</h3>
+          <h4 class="timer">Time:<span class="time-left"></span></h4>
+        </div>
+        <div class="questions-container">
+          <h2 class="question">
+            <span class="number"></span>
+          </h2>
+          <ul class="answers">
+            <li class="answer answer-1"></li>
+            <li class="answer answer-2"></li>
+            <li class="answer answer-3"></li>
+            <li class="answer answer-4"></li>
+          </ul>
+        </div>
+        <div class="question-number-next-btn">
+          <h3 class="question-number">
+            <span class="out-of"></span> of 10 questions
+          </h3>
+          <input type="submit" value="Next" class="next-btn btn btn" />
+        </div>
+      </div>
+
+      <!-- Win-Lose State -->
+      <div class="win-lose-state text-center">
+        <div class="win-or-lose">
+          <i class="crown-icon fas fa-crown fa-8x"></i>
+          <h3 class="congrats">
+            Congratulations! you've Completed the Quiz! <br />
+            and <span class="congrate-nice"></span>
+            <span class="emoji"></span> you got <span class="got"></span> out of
+            10
+          </h3>
+          <input
+            type="submit"
+            value="Play Again"
+            class="start-game-btn-2 btn"
+          />
+          <input type="submit" value="Quit" class="quit-btn-2 btn" />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/ui.js"></script>
+  <script src="./js/http.js"></script>
+  <script src="./js/app.js"></script>
+</html>

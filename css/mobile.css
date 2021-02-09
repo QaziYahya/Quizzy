@@ -1,0 +1,38 @@
+@media (max-width: 600px) {
+  /* Main Container Styling */
+  .quiz-container {
+    transform: translateY(200px);
+  }
+
+  /* Welcome state text */
+  .welcome {
+    font-size: 27px;
+    margin: 0 10px;
+  }
+
+  .welcome-state {
+    transform: translateY(150px);
+  }
+
+  .instructions-state {
+    width: 320px;
+    transform: translateY(70px);
+  }
+
+  .buttons {
+    margin: 10px 0 0 125px;
+  }
+
+  .game-on {
+    width: 310px;
+    transform: translateY(-60px);
+  }
+
+  .answer {
+    font-size: 14px;
+  }
+
+  .win-lose-state {
+    width: 300px;
+  }
+}
