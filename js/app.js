@@ -34,14 +34,6 @@ let questionNumber = 0;
 pass it to other functions*/
 let newData = '';
 
-/* We store boolean values in this variable. It is used to stop the timer.
-We want the timer to stop once the user clicks on an option and thats where
-we use this variable. Inside the timer function we hava an if statement
-and it checks the value of stop, if the value of stop = false the timer
-continues running. If at any point the value of stop = true then the timer 
-stops.*/
-let stop;
-
 // Html of the timer. This is used in the timer function.
 let timeLeft = document.querySelector('.time-left');
 
@@ -67,7 +59,7 @@ function startGame(e) {
       )
       .then((data) => {
         /* Remove the borders(if any) of the options and also set the innerHTML
-        = ''*/
+        = '' */
         ui.changeToDefault();
 
         // Change the page state to the game-on state
@@ -112,28 +104,27 @@ function timer() {
   check = setInterval(function () {
     // Decrease the seconds
     i--;
-    // If stop is false then do the following
-    if (!stop) {
-      // If i >= 0 meaning that if we havent reached the end yet then do the following
-      if (i >= 0) {
-        timeLeft.textContent = i;
 
-        // If i<0 meaning that if we reached the end then do the following
-      } else if (i < 0) {
-        // Clear the interval
-        clearInterval(check);
-        // highlight the correct answer(because the user ran out of time)
-        ui.highlightCorrectAns(newData);
-      }
+    // If i >= 0 meaning that if we havent reached the end yet then do the following
+    if (i >= 0) {
+      timeLeft.textContent = i;
+
+      // If i<0 meaning that if we reached the end then do the following
+    } else if (i < 0) {
+      /* We want the timer to stop when the user runs out of time so we used
+      clearInterval */
+      clearInterval(check);
+
+      // highlight the correct answer(because the user ran out of time)
+      ui.highlightCorrectAns(newData);
     }
   }, 1000);
 }
 
 /* This function is used to determine which option user clicked on */
 function getAns(e) {
-  /* If stop = true then the timer will be stoped and thats what we want here
-  because the user clicked on an option */
-  stop = true;
+  /* clearIntetval stops the 'interval' meaning that the timer will be stoped */
+  clearInterval(check);
 
   // Used to store the textContent of the option user clicked on
   let answerTxt = '';
